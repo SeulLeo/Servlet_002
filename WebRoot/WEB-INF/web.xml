@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+	<servlet-name>myservlet</servlet-name>
+	<servlet-class>com.zk.myservlet.myServlet</servlet-class>
+	<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>myservlet</servlet-name>
+	<url-pattern>/demo2</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	<servlet-name>myservlet2</servlet-name>
+	<servlet-class>com.zk.myservlet.myservlet2</servlet-class>
+	</servlet>
+	<!-- servlet配置细节  通配符*表示任意字符串，url-pattern为/时，为默认servlet-->
+	<servlet-mapping>
+	<servlet-name>myservlet2</servlet-name>
+	<url-pattern>/action/*</url-pattern>
+	<!--  <url-pattern>*.do</url-pattern>-->
+	<!--  <url-pattern>/*</url-pattern>-->
+	<!--  <url-pattern>/servlet/demo33</url-pattern> -->
+	</servlet-mapping>
+	<servlet-mapping>
+	<servlet-name>myservlet2</servlet-name>
+	<url-pattern>/servlet/demo3</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	<servlet-name>myservlet2</servlet-name>
+	<url-pattern>/demo3</url-pattern>
+	</servlet-mapping>
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
